@@ -1,0 +1,12 @@
+﻿{
+    "name": "com.chess.arrows.host",
+    "description": "Chess Arrows Native Messaging Host",
+    "path": "C:\\Program Files\\nodejs\\node.exe",
+    "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://YOUR_EXTENSION_ID"
+    ],
+    "args": [
+        "D:\\python\\chess-arrows-extension\\chess-arrows-host\\lc0_connector.js"
+    ]
+}

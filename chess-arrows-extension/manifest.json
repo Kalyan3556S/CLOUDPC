@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Chess Arrows",
+  "version": "1.0",
+  "description": "Show arrow marks on chess boards based on engine analysis",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "https://lichess.org/*",
+    "https://www.chess.com/*",
+    "https://chess.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://lichess.org/*", "https://chess.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["engine.js"],
+      "matches": ["https://lichess.org/*", "https://chess.com/*"]
+    }
+  ]
+}

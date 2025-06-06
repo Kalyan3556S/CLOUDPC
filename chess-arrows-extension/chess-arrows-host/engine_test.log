@@ -1,0 +1,368 @@
+2025-05-20T20:25:37.049Z Starting engine test...
+2025-05-20T20:25:37.070Z [CMD] uci
+2025-05-20T20:25:37.101Z stderr: _
+|   _ | |
+|_ |_ |_| v0.31.2 built Oct 20 2024
+2025-05-20T20:25:37.105Z stdout: id name Lc0 v0.31.2
+id author The LCZero Authors.
+2025-05-20T20:25:37.106Z stdout: option name WeightsFile type string default D:\games\maia-chess-master\maia-chess-master\maia_weights\maia-1900.pb.gz
+option name Backend type combo default cuda-auto var cuda-auto var cuda var cuda-fp16 var trivial var random var check var recordreplay var roundrobin var multiplexing var demux
+option name BackendOptions type string default 
+option name Threads type spin default 0 min 0 max 128
+option name NNCacheSize type spin default 2000000 min 0 max 999999999
+option name MinibatchSize type spin default 0 min 0 max 1024
+option name MaxPrefetch type spin default 32 min 0 max 1024
+option name CPuct type string default 1.745000
+option name CPuctBase type string default 38739.000000
+option name CPuctFactor type string default 3.894000
+option name TwoFoldDraws type check default true
+option name VerboseMoveStats type check default false
+option name FpuStrategy type combo default reduction var reduction var absolute
+option name FpuValue type string default 0.330000
+option name CacheHistoryLength type spin default 0 min 0 max 7
+option name PolicyTemperature type string default 1.359000
+option name MaxCollisionEvents type spin default 917 min 1 max 65536
+option name MaxCollisionVisits type spin default 80000 min 1 max 100000000
+option name MaxCollisionVisitsScalingStart type spin default 28 min 1 max 100000
+option name MaxCollisionVisitsScalingEnd type spin default 145000 min 0 max 100000000
+option name MaxCollisionVisitsScalingPower type string default 1.250000
+option name OutOfOrderEval type check default true
+option name MaxOutOfOrderEvalsFactor type string default 2.400000
+option name StickyEndgames type check default true
+option name SyzygyFastPlay type check default false
+option name MultiPV type spin default 1 min 1 max 500
+option name PerPVCounters type check default false
+option name ScoreType type combo default WDL_mu var centipawn var centipawn_with_drawscore var centipawn_2019 var centipawn_2018 var win_percentage var Q var W-L var WDL_mu
+option name HistoryFill type combo default fen_only var no var fen_only var always
+option name MovesLeftMaxEffect type string default 0.034500
+option name MovesLeftThreshold type string default 0.800000
+option name MovesLeftSlope type string default 0.002700
+option name MovesLeftConstantFactor type string default 0.000000
+option name MovesLeftScaledFactor type string default 1.652100
+option name MovesLeftQuadraticFactor type string default -0.652100
+option name MaxConcurrentSearchers type spin default 1 min 0 max 128
+option name DrawScore type string default 0.000000
+option name ContemptMode type combo default play var play var white_side_analysis var black_side_analysis var disable
+option name Contempt type string default 
+option name WDLCalibrationElo type string default 0.000000
+option name WDLEvalObjectivity type string default 1.000000
+option name WDLDrawRateReference type string default 0.500000
+option name NodesPerSecondLimit type string default 0.000000
+option name SolidTreeThreshold type spin default 100 min 1 max 2000000000
+option name TaskWorkers type spin default -1 min -1 max 128
+option name MinimumProcessingWork type spin default 20 min 2 max 100000
+option name MinimumPickingWork type spin default 1 min 1 max 100000
+option name MinimumRemainingPickingWork type spin default 20 min 0 max 100000
+option name MinimumPerTaskProcessing type spin default 8 min 1 max 100000
+option name IdlingMinimumWork type spin default 0 min 0 max 10000
+option name ThreadIdlingThreshold type spin default 1 min 0 max 128
+option name UCI_Opponent type string default 
+option name UCI_RatingAdv type string default 0.000000
+option name SearchSpinBackoff type check default false
+option name ConfigFile type string default lc0.config
+option name SyzygyPath type string default 
+option name Ponder type check default true
+option name UCI_Chess960 type check default false
+option name UCI_ShowWDL type check default false
+option name UCI_ShowMovesLeft type check default false
+option name SmartPruningFactor type string default 1.330000
+option name SmartPruningMinimumBatches type spin default 0 min 0 max 10000
+option name RamLimitMb type spin default 0 min 0 max 100000000
+option name MoveOverheadMs type spin default 200 min 0 max 100000000
+option name TimeManager type string default legacy
+option name ValueOnly type check default false
+option name LogFile type string default 
+uciok
+2025-05-20T20:25:37.138Z [ENGINE] uciok
+2025-05-20T20:25:37.139Z [CMD] isready
+2025-05-20T20:25:37.140Z stdout: readyok
+2025-05-20T20:25:37.141Z [ENGINE] readyok
+2025-05-20T20:25:37.142Z [CMD] setoption name MultiPV value 3
+2025-05-20T20:25:37.143Z [CMD] position startpos
+2025-05-20T20:25:37.144Z [CMD] go depth 15
+2025-05-20T20:25:37.146Z stderr: Loading weights file from: D:\games\maia-chess-master\maia-chess-master\maia_weights\maia-1900.pb.gz
+2025-05-20T20:25:37.172Z stderr: Creating backend [cuda-auto]...
+2025-05-20T20:25:37.278Z stderr: Switching to [cuda-fp16]...
+2025-05-20T20:25:37.279Z stderr: CUDA Runtime version: 11.1.0
+Latest version of CUDA supported by the driver: 12.9.0
+2025-05-20T20:25:37.280Z stderr: GPU: NVIDIA GeForce RTX 3050 Laptop GPU
+GPU memory: 3.99951 Gb
+GPU clock frequency: 1500 MHz
+GPU compute capability: 8.6
+L2 cache capacity: 1572864
+2025-05-20T20:25:38.192Z stdout: info depth 1 seldepth 2 time 1046 nodes 2 score cp 44 nps 666 tbhits 0 multipv 1 pv e2e4 c7c5
+info depth 1 seldepth 2 time 1046 nodes 2 score cp 52 nps 666 tbhits 0 multipv 2 pv d2d4
+info depth 1 seldepth 2 time 1046 nodes 2 score cp 52 nps 666 tbhits 0 multipv 3 pv c2c4
+2025-05-20T20:25:38.192Z [ENGINE] depth: 1, score: 44 cp, nodes: 2, nps: 666
+2025-05-20T20:25:38.193Z [ENGINE] depth: 1, score: 52 cp, nodes: 2, nps: 666
+2025-05-20T20:25:38.193Z [ENGINE] depth: 1, score: 52 cp, nodes: 2, nps: 666
+2025-05-20T20:25:38.193Z stdout: info depth 2 seldepth 3 time 1047 nodes 3 score cp 41 nps 750 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3
+info depth 2 seldepth 3 time 1047 nodes 3 score cp 48 nps 750 tbhits 0 multipv 2 pv d2d4
+info depth 2 seldepth 3 time 1047 nodes 3 score cp 48 nps 750 tbhits 0 multipv 3 pv c2c4
+2025-05-20T20:25:38.193Z [ENGINE] depth: 2, score: 41 cp, nodes: 3, nps: 750
+2025-05-20T20:25:38.194Z [ENGINE] depth: 2, score: 48 cp, nodes: 3, nps: 750
+2025-05-20T20:25:38.194Z [ENGINE] depth: 2, score: 48 cp, nodes: 3, nps: 750
+2025-05-20T20:25:38.195Z stdout: info depth 2 seldepth 4 time 1049 nodes 9 score cp 62 nps 1500 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 d7d6
+info depth 2 seldepth 4 time 1049 nodes 9 score cp 76 nps 1500 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4
+info depth 2 seldepth 4 time 1049 nodes 9 score cp 66 nps 1500 tbhits 0 multipv 3 pv c2c4
+2025-05-20T20:25:38.195Z [ENGINE] depth: 2, score: 62 cp, nodes: 9, nps: 1500
+2025-05-20T20:25:38.195Z [ENGINE] depth: 2, score: 76 cp, nodes: 9, nps: 1500
+2025-05-20T20:25:38.195Z [ENGINE] depth: 2, score: 66 cp, nodes: 9, nps: 1500
+2025-05-20T20:25:38.196Z stdout: info depth 3 seldepth 5 time 1049 nodes 14 score cp 61 nps 2333 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 d7d6 d2d4
+info depth 3 seldepth 5 time 1049 nodes 14 score cp 78 nps 2333 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 e7e6
+info depth 3 seldepth 5 time 1049 nodes 14 score cp 68 nps 2333 tbhits 0 multipv 3 pv c2c4
+2025-05-20T20:25:38.196Z [ENGINE] depth: 3, score: 61 cp, nodes: 14, nps: 2333
+2025-05-20T20:25:38.196Z [ENGINE] depth: 3, score: 78 cp, nodes: 14, nps: 2333
+2025-05-20T20:25:38.196Z [ENGINE] depth: 3, score: 68 cp, nodes: 14, nps: 2333
+2025-05-20T20:25:38.197Z stdout: info depth 3 seldepth 6 time 1050 nodes 19 score cp 62 nps 2714 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4
+info depth 3 seldepth 6 time 1050 nodes 19 score cp 83 nps 2714 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 e7e6 b1c3
+info depth 3 seldepth 6 time 1050 nodes 19 score cp 70 nps 2714 tbhits 0 multipv 3 pv c2c4
+2025-05-20T20:25:38.197Z [ENGINE] depth: 3, score: 62 cp, nodes: 19, nps: 2714
+2025-05-20T20:25:38.197Z [ENGINE] depth: 3, score: 83 cp, nodes: 19, nps: 2714
+2025-05-20T20:25:38.197Z [ENGINE] depth: 3, score: 70 cp, nodes: 19, nps: 2714
+2025-05-20T20:25:38.201Z stdout: info depth 4 seldepth 7 time 1055 nodes 53 score cp 54 nps 4416 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4
+info depth 4 seldepth 7 time 1055 nodes 53 score cp 70 nps 4416 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7
+info depth 4 seldepth 7 time 1055 nodes 53 score cp 110 nps 4416 tbhits 0 multipv 3 pv g1f3 d7d5 g2g3 c7c5
+2025-05-20T20:25:38.201Z [ENGINE] depth: 4, score: 54 cp, nodes: 53, nps: 4416
+2025-05-20T20:25:38.202Z [ENGINE] depth: 4, score: 70 cp, nodes: 53, nps: 4416
+2025-05-20T20:25:38.202Z [ENGINE] depth: 4, score: 110 cp, nodes: 53, nps: 4416
+2025-05-20T20:25:38.202Z stdout: info depth 4 seldepth 8 time 1056 nodes 94 score cp 53 nps 7230 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6
+info depth 4 seldepth 8 time 1056 nodes 94 score cp 72 nps 7230 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4
+2025-05-20T20:25:38.203Z [ENGINE] depth: 4, score: 53 cp, nodes: 94, nps: 7230
+2025-05-20T20:25:38.203Z [ENGINE] depth: 4, score: 72 cp, nodes: 94, nps: 7230
+2025-05-20T20:25:38.203Z stdout: info depth 4 seldepth 8 time 1056 nodes 94 score cp 91 nps 7230 tbhits 0 multipv 3 pv g1f3 d7d5 d2d4 g8f6 c2c4
+2025-05-20T20:25:38.203Z [ENGINE] depth: 4, score: 91 cp, nodes: 94, nps: 7230
+2025-05-20T20:25:38.206Z stdout: info depth 4 seldepth 9 time 1060 nodes 211 score cp 51 nps 12411 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3
+info depth 4 seldepth 9 time 1060 nodes 211 score cp 70 nps 12411 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6
+info depth 4 seldepth 9 time 1060 nodes 211 score cp 99 nps 12411 tbhits 0 multipv 3 pv g1f3 d7d5 g2g3 g8f6 f1g2
+2025-05-20T20:25:38.206Z [ENGINE] depth: 4, score: 51 cp, nodes: 211, nps: 12411
+2025-05-20T20:25:38.207Z [ENGINE] depth: 4, score: 70 cp, nodes: 211, nps: 12411
+2025-05-20T20:25:38.207Z [ENGINE] depth: 4, score: 99 cp, nodes: 211, nps: 12411
+2025-05-20T20:25:38.207Z stdout: info depth 4 seldepth 10 time 1061 nodes 287 score cp 48 nps 15944 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3
+2025-05-20T20:25:38.207Z [ENGINE] depth: 4, score: 48 cp, nodes: 287, nps: 15944
+2025-05-20T20:25:38.209Z stdout: info depth 4 seldepth 10 time 1061 nodes 287 score cp 69 nps 15944 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6
+info depth 4 seldepth 10 time 1061 nodes 287 score cp 99 nps 15944 tbhits 0 multipv 3 pv g1f3 g8f6 g2g3 g7g6 f1g2 f8g7
+info depth 5 seldepth 10 time 1062 nodes 325 score cp 50 nps 17105 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3
+info depth 5 seldepth 10 time 1062 nodes 325 score cp 70 nps 17105 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6
+info depth 5 seldepth 10 time 1062 nodes 325 score cp 100 nps 17105 tbhits 0 multipv 3 pv g1f3 g8f6 g2g3 g7g6 f1g2 f8g7
+2025-05-20T20:25:38.211Z [ENGINE] depth: 4, score: 69 cp, nodes: 287, nps: 15944
+2025-05-20T20:25:38.213Z [ENGINE] depth: 4, score: 99 cp, nodes: 287, nps: 15944
+2025-05-20T20:25:38.214Z [ENGINE] depth: 5, score: 50 cp, nodes: 325, nps: 17105
+2025-05-20T20:25:38.215Z [ENGINE] depth: 5, score: 70 cp, nodes: 325, nps: 17105
+2025-05-20T20:25:38.216Z [ENGINE] depth: 5, score: 100 cp, nodes: 325, nps: 17105
+2025-05-20T20:25:38.217Z stdout: info depth 5 seldepth 11 time 1062 nodes 360 score cp 49 nps 18947 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3
+info depth 5 seldepth 11 time 1062 nodes 360 score cp 71 nps 18947 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 e8g8
+info depth 5 seldepth 11 time 1062 nodes 360 score cp 101 nps 18947 tbhits 0 multipv 3 pv g1f3 d7d5 c2c4 c7c6 e2e3
+info depth 5 seldepth 12 time 1064 nodes 431 score cp 47 nps 20523 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3
+info depth 5 seldepth 12 time 1064 nodes 431 score cp 70 nps 20523 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3
+info depth 5 seldepth 12 time 1064 nodes 431 score cp 97 nps 20523 tbhits 0 multipv 3 pv g1f3 g8f6 d2d4 g7g6 c1f4 f8g7
+info depth 5 seldepth 13 time 1065 nodes 507 score cp 46 nps 23045 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4
+info depth 5 seldepth 13 time 1065 nodes 507 score cp 72 nps 23045 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3
+info depth 5 seldepth 13 time 1065 nodes 507 score cp 96 nps 23045 tbhits 0 multipv 3 pv g1f3 d7d5 d2d4 g8f6 c2c4 c7c6 b1c3
+2025-05-20T20:25:38.218Z [ENGINE] depth: 5, score: 49 cp, nodes: 360, nps: 18947
+2025-05-20T20:25:38.221Z [ENGINE] depth: 5, score: 71 cp, nodes: 360, nps: 18947
+2025-05-20T20:25:38.221Z [ENGINE] depth: 5, score: 101 cp, nodes: 360, nps: 18947
+2025-05-20T20:25:38.222Z [ENGINE] depth: 5, score: 47 cp, nodes: 431, nps: 20523
+2025-05-20T20:25:38.222Z [ENGINE] depth: 5, score: 70 cp, nodes: 431, nps: 20523
+2025-05-20T20:25:38.222Z [ENGINE] depth: 5, score: 97 cp, nodes: 431, nps: 20523
+2025-05-20T20:25:38.222Z [ENGINE] depth: 5, score: 46 cp, nodes: 507, nps: 23045
+2025-05-20T20:25:38.223Z [ENGINE] depth: 5, score: 72 cp, nodes: 507, nps: 23045
+2025-05-20T20:25:38.224Z [ENGINE] depth: 5, score: 96 cp, nodes: 507, nps: 23045
+2025-05-20T20:25:38.232Z stdout: info depth 6 seldepth 13 time 1086 nodes 1705 score cp 50 nps 39651 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4
+info depth 6 seldepth 13 time 1086 nodes 1705 score cp 67 nps 39651 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 c7c5 e2e3
+info depth 6 seldepth 13 time 1086 nodes 1705 score cp 95 nps 39651 tbhits 0 multipv 3 pv g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8f5
+2025-05-20T20:25:38.233Z [ENGINE] depth: 6, score: 50 cp, nodes: 1705, nps: 39651
+2025-05-20T20:25:38.233Z [ENGINE] depth: 6, score: 67 cp, nodes: 1705, nps: 39651
+2025-05-20T20:25:38.234Z [ENGINE] depth: 6, score: 95 cp, nodes: 1705, nps: 39651
+2025-05-20T20:25:38.245Z stdout: info depth 6 seldepth 14 time 1098 nodes 2519 score cp 51 nps 44982 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1e2 e7e5 d4b3
+info depth 6 seldepth 14 time 1098 nodes 2519 score cp 67 nps 44982 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f4 e8g8 g1f3
+info depth 6 seldepth 14 time 1098 nodes 2519 score cp 94 nps 44982 tbhits 0 multipv 3 pv g1f3 d7d5 d2d4 g8f6 c2c4 c7c6 b1c3 e7e6
+2025-05-20T20:25:38.245Z [ENGINE] depth: 6, score: 51 cp, nodes: 2519, nps: 44982
+2025-05-20T20:25:38.245Z [ENGINE] depth: 6, score: 67 cp, nodes: 2519, nps: 44982
+2025-05-20T20:25:38.245Z [ENGINE] depth: 6, score: 94 cp, nodes: 2519, nps: 44982
+2025-05-20T20:25:38.285Z stdout: info depth 6 seldepth 15 time 1138 nodes 5242 score cp 51 nps 55178 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 f8e7 d1f3
+2025-05-20T20:25:38.286Z stdout: info depth 6 seldepth 15 time 1138 nodes 5242 score cp 65 nps 55178 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 c7c5 e2e3 e8g8
+info depth 6 seldepth 15 time 1138 nodes 5242 score cp 90 nps 55178 tbhits 0 multipv 3 pv g1f3 g8f6 g2g3 g7g6 f1g2 f8g7 e1g1 e8g8 d2d3 d7d5 b1d2 c7c5
+2025-05-20T20:25:38.286Z [ENGINE] depth: 6, score: 51 cp, nodes: 5242, nps: 55178
+2025-05-20T20:25:38.286Z [ENGINE] depth: 6, score: 65 cp, nodes: 5242, nps: 55178
+2025-05-20T20:25:38.287Z [ENGINE] depth: 6, score: 90 cp, nodes: 5242, nps: 55178
+2025-05-20T20:25:38.336Z stdout: info depth 7 seldepth 15 time 1189 nodes 8020 score cp 52 nps 54931 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6
+info depth 7 seldepth 15 time 1189 nodes 8020 score cp 62 nps 54931 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6
+info depth 7 seldepth 15 time 1189 nodes 8020 score cp 88 nps 54931 tbhits 0 multipv 3 pv g1f3 g8f6 g2g3 g7g6 f1g2 f8g7 e1g1 e8g8 d2d3 d7d6 e2e4 e7e5 b1c3
+2025-05-20T20:25:38.337Z [ENGINE] depth: 7, score: 52 cp, nodes: 8020, nps: 54931
+2025-05-20T20:25:38.337Z [ENGINE] depth: 7, score: 62 cp, nodes: 8020, nps: 54931
+2025-05-20T20:25:38.337Z [ENGINE] depth: 7, score: 88 cp, nodes: 8020, nps: 54931
+2025-05-20T20:25:38.373Z stdout: info depth 7 seldepth 16 time 1226 nodes 10569 score cp 53 nps 57754 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6
+info depth 7 seldepth 16 time 1226 nodes 10569 score cp 62 nps 57754 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6
+info depth 7 seldepth 16 time 1226 nodes 10569 score cp 89 nps 57754 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3
+2025-05-20T20:25:38.373Z [ENGINE] depth: 7, score: 53 cp, nodes: 10569, nps: 57754
+2025-05-20T20:25:38.373Z [ENGINE] depth: 7, score: 62 cp, nodes: 10569, nps: 57754
+2025-05-20T20:25:38.374Z [ENGINE] depth: 7, score: 89 cp, nodes: 10569, nps: 57754
+2025-05-20T20:25:38.432Z stdout: info depth 7 seldepth 17 time 1286 nodes 14253 score cp 54 nps 58654 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3
+info depth 7 seldepth 17 time 1286 nodes 14253 score cp 60 nps 58654 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5
+info depth 7 seldepth 17 time 1286 nodes 14253 score cp 89 nps 58654 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6
+2025-05-20T20:25:38.433Z [ENGINE] depth: 7, score: 54 cp, nodes: 14253, nps: 58654
+2025-05-20T20:25:38.433Z [ENGINE] depth: 7, score: 60 cp, nodes: 14253, nps: 58654
+2025-05-20T20:25:38.433Z [ENGINE] depth: 7, score: 89 cp, nodes: 14253, nps: 58654
+2025-05-20T20:25:38.504Z stdout: info depth 7 seldepth 18 time 1357 nodes 18773 score cp 54 nps 59596 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5
+info depth 7 seldepth 18 time 1357 nodes 18773 score cp 59 nps 59596 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1
+info depth 7 seldepth 18 time 1357 nodes 18773 score cp 89 nps 59596 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5
+2025-05-20T20:25:38.504Z [ENGINE] depth: 7, score: 54 cp, nodes: 18773, nps: 59596
+2025-05-20T20:25:38.504Z [ENGINE] depth: 7, score: 59 cp, nodes: 18773, nps: 59596
+2025-05-20T20:25:38.505Z [ENGINE] depth: 7, score: 89 cp, nodes: 18773, nps: 59596
+2025-05-20T20:25:38.665Z stdout: info depth 7 seldepth 19 time 1518 nodes 30120 score cp 54 nps 63410 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 c3d5 f8e7
+info depth 7 seldepth 19 time 1518 nodes 30120 score cp 58 nps 63410 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6
+info depth 7 seldepth 19 time 1518 nodes 30120 score cp 88 nps 63410 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5
+2025-05-20T20:25:38.665Z [ENGINE] depth: 7, score: 54 cp, nodes: 30120, nps: 63410
+2025-05-20T20:25:38.665Z [ENGINE] depth: 7, score: 58 cp, nodes: 30120, nps: 63410
+2025-05-20T20:25:38.665Z [ENGINE] depth: 7, score: 88 cp, nodes: 30120, nps: 63410
+2025-05-20T20:25:38.742Z stdout: info depth 8 seldepth 19 time 1595 nodes 35448 score cp 54 nps 64101 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 c3d5 f8e7
+info depth 8 seldepth 19 time 1595 nodes 35448 score cp 57 nps 64101 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3
+info depth 8 seldepth 19 time 1595 nodes 35448 score cp 88 nps 64101 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5
+2025-05-20T20:25:38.742Z [ENGINE] depth: 8, score: 54 cp, nodes: 35448, nps: 64101
+2025-05-20T20:25:38.742Z [ENGINE] depth: 8, score: 57 cp, nodes: 35448, nps: 64101
+2025-05-20T20:25:38.742Z [ENGINE] depth: 8, score: 88 cp, nodes: 35448, nps: 64101
+2025-05-20T20:25:39.013Z stdout: info depth 8 seldepth 20 time 1867 nodes 58711 score cp 55 nps 71251 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 e7e5 d4b5 d7d6 b1c3 a7a6 b5a3 b7b5 c3d5 g8f6 c1g5 f8e7
+info depth 8 seldepth 20 time 1867 nodes 58711 score cp 55 nps 71251 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7
+info depth 8 seldepth 20 time 1867 nodes 58711 score cp 87 nps 71251 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5
+2025-05-20T20:25:39.013Z [ENGINE] depth: 8, score: 55 cp, nodes: 58711, nps: 71251
+2025-05-20T20:25:39.014Z [ENGINE] depth: 8, score: 55 cp, nodes: 58711, nps: 71251
+2025-05-20T20:25:39.014Z [ENGINE] depth: 8, score: 87 cp, nodes: 58711, nps: 71251
+2025-05-20T20:25:39.404Z stdout: info depth 8 seldepth 21 time 2258 nodes 91875 score cp 55 nps 75617 tbhits 0 multipv 1 pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 e7e5 d4b5 d7d6 b1c3 a7a6 b5a3 b7b5 c3d5 g8f6 c1g5 f8e7
+info depth 8 seldepth 21 time 2258 nodes 91875 score cp 54 nps 75617 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 g7g6 e2e4 a6f1 e1f1 d7d6 g1f3 f8g7
+info depth 8 seldepth 21 time 2258 nodes 91875 score cp 86 nps 75617 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5 h7h6
+2025-05-20T20:25:39.405Z [ENGINE] depth: 8, score: 55 cp, nodes: 91875, nps: 75617
+2025-05-20T20:25:39.405Z [ENGINE] depth: 8, score: 54 cp, nodes: 91875, nps: 75617
+2025-05-20T20:25:39.405Z [ENGINE] depth: 8, score: 86 cp, nodes: 91875, nps: 75617
+2025-05-20T20:25:39.798Z stdout: info depth 8 seldepth 22 time 2652 nodes 129304 score cp 54 nps 80362 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6
+info depth 8 seldepth 22 time 2652 nodes 129304 score cp 53 nps 80362 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3
+info depth 8 seldepth 22 time 2652 nodes 129304 score cp 85 nps 80362 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5 h7h6
+2025-05-20T20:25:39.798Z [ENGINE] depth: 8, score: 54 cp, nodes: 129304, nps: 80362
+2025-05-20T20:25:39.799Z [ENGINE] depth: 8, score: 53 cp, nodes: 129304, nps: 80362
+2025-05-20T20:25:39.799Z [ENGINE] depth: 8, score: 85 cp, nodes: 129304, nps: 80362
+2025-05-20T20:25:39.888Z stdout: info depth 9 seldepth 22 time 2742 nodes 137490 score cp 54 nps 80924 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6
+info depth 9 seldepth 22 time 2742 nodes 137490 score cp 53 nps 80924 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3
+info depth 9 seldepth 22 time 2742 nodes 137490 score cp 85 nps 80924 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5 h7h6
+2025-05-20T20:25:39.889Z [ENGINE] depth: 9, score: 54 cp, nodes: 137490, nps: 80924
+2025-05-20T20:25:39.889Z [ENGINE] depth: 9, score: 53 cp, nodes: 137490, nps: 80924
+2025-05-20T20:25:39.889Z [ENGINE] depth: 9, score: 85 cp, nodes: 137490, nps: 80924
+2025-05-20T20:25:40.744Z stdout: info depth 9 seldepth 23 time 3597 nodes 224078 score cp 54 nps 87736 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4
+info depth 9 seldepth 23 time 3597 nodes 224078 score cp 53 nps 87736 tbhits 0 multipv 2 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g2g3 f8g7 f1g2
+info depth 9 seldepth 23 time 3597 nodes 224078 score cp 84 nps 87736 tbhits 0 multipv 3 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5 h7h6 g5f6
+2025-05-20T20:25:40.747Z [ENGINE] depth: 9, score: 54 cp, nodes: 224078, nps: 87736
+2025-05-20T20:25:40.749Z [ENGINE] depth: 9, score: 53 cp, nodes: 224078, nps: 87736
+2025-05-20T20:25:40.749Z [ENGINE] depth: 9, score: 84 cp, nodes: 224078, nps: 87736
+2025-05-20T20:25:42.596Z stdout: info depth 9 seldepth 24 time 5450 nodes 418347 score cp 53 nps 94927 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6 b8c6 g1f3 c8g4 c2c3 e7e6 f1e2 f8d6 e1g1 e8g8 c1g5 h7h6 g5h4
+info depth 9 seldepth 24 time 5450 nodes 418347 score cp 82 nps 94927 tbhits 0 multipv 2 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 d7d6 e1g1 e7e5 d2d3 b8c6 c1g5 h7h6 g5f6
+info depth 9 seldepth 24 time 5450 nodes 418347 score cp 52 nps 94927 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7
+2025-05-20T20:25:42.600Z [ENGINE] depth: 9, score: 53 cp, nodes: 418347, nps: 94927
+2025-05-20T20:25:42.602Z [ENGINE] depth: 9, score: 82 cp, nodes: 418347, nps: 94927
+2025-05-20T20:25:42.603Z [ENGINE] depth: 9, score: 52 cp, nodes: 418347, nps: 94927
+2025-05-20T20:25:43.377Z stdout: info depth 10 seldepth 24 time 6231 nodes 496730 score cp 52 nps 95745 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6 b8c6 g1f3 c8g4 c2c3 e7e6 f1e2 f8d6 e1g1 e8g8 c1g5 h7h6 g5h4
+info depth 10 seldepth 24 time 6231 nodes 496730 score cp 82 nps 95745 tbhits 0 multipv 2 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 e7e5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e6
+info depth 10 seldepth 24 time 6231 nodes 496730 score cp 52 nps 95745 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1
+2025-05-20T20:25:43.378Z [ENGINE] depth: 10, score: 52 cp, nodes: 496730, nps: 95745
+2025-05-20T20:25:43.378Z [ENGINE] depth: 10, score: 82 cp, nodes: 496730, nps: 95745
+2025-05-20T20:25:43.378Z [ENGINE] depth: 10, score: 52 cp, nodes: 496730, nps: 95745
+2025-05-20T20:25:43.968Z stdout: info depth 10 seldepth 25 time 6822 nodes 564584 score cp 52 nps 97695 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6 b8c6 g1f3 c8g4 c2c3 e7e6 f1e2 f8d6 e1g1 e8g8 c1g5 h7h6 g5h4
+info depth 10 seldepth 25 time 6822 nodes 564584 score cp 82 nps 97695 tbhits 0 multipv 2 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 e7e5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e6
+info depth 10 seldepth 25 time 6822 nodes 564584 score cp 52 nps 97695 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1
+2025-05-20T20:25:43.968Z [ENGINE] depth: 10, score: 52 cp, nodes: 564584, nps: 97695
+2025-05-20T20:25:43.969Z [ENGINE] depth: 10, score: 82 cp, nodes: 564584, nps: 97695
+2025-05-20T20:25:43.969Z [ENGINE] depth: 10, score: 52 cp, nodes: 564584, nps: 97695
+2025-05-20T20:25:48.837Z stdout: info depth 10 seldepth 26 time 11691 nodes 1095095 score cp 51 nps 102845 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6 b8c6 g1f3 c8g4 c2c3 e7e6 f1e2 f8d6 e1g1 e8g8 c1g5 h7h6 g5h4 g7g5
+info depth 10 seldepth 26 time 11691 nodes 1095095 score cp 80 nps 102845 tbhits 0 multipv 2 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 e7e5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e6 c1e3
+info depth 10 seldepth 26 time 11691 nodes 1095095 score cp 51 nps 102845 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4
+2025-05-20T20:25:48.838Z [ENGINE] depth: 10, score: 51 cp, nodes: 1095095, nps: 102845
+2025-05-20T20:25:48.839Z [ENGINE] depth: 10, score: 80 cp, nodes: 1095095, nps: 102845
+2025-05-20T20:25:48.840Z [ENGINE] depth: 10, score: 51 cp, nodes: 1095095, nps: 102845
+2025-05-20T20:25:50.573Z stdout: info depth 10 seldepth 27 time 13426 nodes 1281817 score cp 51 nps 103514 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6 b8c6 g1f3 c8g4 c2c3 e7e6 f1e2 f8d6 e1g1 e8g8 c1g5 h7h6 g5h4 g7g5
+2025-05-20T20:25:50.573Z [ENGINE] depth: 10, score: 51 cp, nodes: 1281817, nps: 103514
+2025-05-20T20:25:50.574Z stdout: info depth 10 seldepth 27 time 13426 nodes 1281817 score cp 79 nps 103514 tbhits 0 multipv 2 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 c3e2 f6d7
+info depth 10 seldepth 27 time 13426 nodes 1281817 score cp 51 nps 103514 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4
+2025-05-20T20:25:50.574Z [ENGINE] depth: 10, score: 79 cp, nodes: 1281817, nps: 103514
+2025-05-20T20:25:50.574Z [ENGINE] depth: 10, score: 51 cp, nodes: 1281817, nps: 103514
+2025-05-20T20:25:51.322Z stdout: info depth 10 seldepth 27 time 14175 nodes 1364587 score cp 79 nps 103913 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4
+info depth 10 seldepth 27 time 14175 nodes 1364587 score cp 51 nps 103913 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6 b8c6 g1f3 c8g4 c2c3 e7e6 f1e2 f8d6 e1g1 e8g8 c1g5 h7h6 g5h4 d6e7 b1d2
+info depth 10 seldepth 27 time 14175 nodes 1364587 score cp 51 nps 103913 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4
+2025-05-20T20:25:51.324Z [ENGINE] depth: 10, score: 79 cp, nodes: 1364587, nps: 103913
+2025-05-20T20:25:51.325Z [ENGINE] depth: 10, score: 51 cp, nodes: 1364587, nps: 103913
+2025-05-20T20:25:51.326Z [ENGINE] depth: 10, score: 51 cp, nodes: 1364587, nps: 103913
+2025-05-20T20:25:51.327Z stdout: info depth 10 seldepth 27 time 14180 nodes 1365156 score cp 51 nps 103916 tbhits 0 multipv 1 pv e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6 b8c6 g1f3 c8g4 c2c3 e7e6 f1e2 f8d6 e1g1 e8g8 c1g5 h7h6 g5h4 d6e7 b1d2
+info depth 10 seldepth 27 time 14180 nodes 1365156 score cp 79 nps 103916 tbhits 0 multipv 2 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4
+info depth 10 seldepth 27 time 14180 nodes 1365156 score cp 51 nps 103916 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4
+2025-05-20T20:25:51.328Z [ENGINE] depth: 10, score: 51 cp, nodes: 1365156, nps: 103916
+2025-05-20T20:25:51.328Z [ENGINE] depth: 10, score: 79 cp, nodes: 1365156, nps: 103916
+2025-05-20T20:25:51.329Z [ENGINE] depth: 10, score: 51 cp, nodes: 1365156, nps: 103916
+2025-05-20T20:25:51.348Z stdout: info depth 10 seldepth 27 time 14202 nodes 1367350 score cp 79 nps 103909 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4
+info depth 10 seldepth 27 time 14202 nodes 1367350 score cp 51 nps 103909 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6 b8c6 g1f3 c8g4 c2c3 e7e6 f1e2 f8d6 e1g1 e8g8 c1g5 h7h6 g5h4 d6e7 b1d2
+info depth 10 seldepth 27 time 14202 nodes 1367350 score cp 51 nps 103909 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4
+2025-05-20T20:25:51.349Z [ENGINE] depth: 10, score: 79 cp, nodes: 1367350, nps: 103909
+2025-05-20T20:25:51.349Z [ENGINE] depth: 10, score: 51 cp, nodes: 1367350, nps: 103909
+2025-05-20T20:25:51.349Z [ENGINE] depth: 10, score: 51 cp, nodes: 1367350, nps: 103909
+2025-05-20T20:25:53.981Z stdout: info depth 10 seldepth 28 time 16834 nodes 1607000 score cp 78 nps 101766 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4
+info depth 10 seldepth 28 time 16834 nodes 1607000 score cp 51 nps 101766 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5
+info depth 10 seldepth 28 time 16834 nodes 1607000 score cp 51 nps 101766 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3
+2025-05-20T20:25:53.982Z [ENGINE] depth: 10, score: 78 cp, nodes: 1607000, nps: 101766
+2025-05-20T20:25:53.983Z [ENGINE] depth: 10, score: 51 cp, nodes: 1607000, nps: 101766
+2025-05-20T20:25:53.984Z [ENGINE] depth: 10, score: 51 cp, nodes: 1607000, nps: 101766
+2025-05-20T20:25:54.363Z stdout: info depth 11 seldepth 28 time 17217 nodes 1640711 score cp 78 nps 101441 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4
+info depth 11 seldepth 28 time 17217 nodes 1640711 score cp 51 nps 101441 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5
+info depth 11 seldepth 28 time 17217 nodes 1640711 score cp 51 nps 101441 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3
+2025-05-20T20:25:54.364Z [ENGINE] depth: 11, score: 78 cp, nodes: 1640711, nps: 101441
+2025-05-20T20:25:54.364Z [ENGINE] depth: 11, score: 51 cp, nodes: 1640711, nps: 101441
+2025-05-20T20:25:54.364Z [ENGINE] depth: 11, score: 51 cp, nodes: 1640711, nps: 101441
+2025-05-20T20:25:59.364Z stdout: info depth 11 seldepth 28 time 22218 nodes 2105194 score cp 77 nps 99418 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 c3e2 f6d7 f2f4
+info depth 11 seldepth 28 time 22218 nodes 2105194 score cp 51 nps 99418 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5
+info depth 11 seldepth 28 time 22218 nodes 2105194 score cp 50 nps 99418 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3 g4e5
+2025-05-20T20:25:59.365Z [ENGINE] depth: 11, score: 77 cp, nodes: 2105194, nps: 99418
+2025-05-20T20:25:59.365Z [ENGINE] depth: 11, score: 51 cp, nodes: 2105194, nps: 99418
+2025-05-20T20:25:59.366Z [ENGINE] depth: 11, score: 50 cp, nodes: 2105194, nps: 99418
+2025-05-20T20:25:59.895Z stdout: info depth 11 seldepth 29 time 22748 nodes 2154524 score cp 77 nps 99259 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 c3e2 f6d7 f2f4
+info depth 11 seldepth 29 time 22748 nodes 2154524 score cp 51 nps 99259 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5
+info depth 11 seldepth 29 time 22748 nodes 2154524 score cp 50 nps 99259 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3 g4e5
+2025-05-20T20:25:59.896Z [ENGINE] depth: 11, score: 77 cp, nodes: 2154524, nps: 99259
+2025-05-20T20:25:59.896Z [ENGINE] depth: 11, score: 51 cp, nodes: 2154524, nps: 99259
+2025-05-20T20:25:59.897Z [ENGINE] depth: 11, score: 50 cp, nodes: 2154524, nps: 99259
+2025-05-20T20:26:02.970Z stdout: info depth 11 seldepth 30 time 25824 nodes 2397519 score cp 77 nps 96748 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 c3e2 f6d7 f2f4
+info depth 11 seldepth 30 time 25824 nodes 2397519 score cp 51 nps 96748 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5
+info depth 11 seldepth 30 time 25824 nodes 2397519 score cp 50 nps 96748 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3 g4e5
+2025-05-20T20:26:02.971Z [ENGINE] depth: 11, score: 77 cp, nodes: 2397519, nps: 96748
+2025-05-20T20:26:02.971Z [ENGINE] depth: 11, score: 51 cp, nodes: 2397519, nps: 96748
+2025-05-20T20:26:02.971Z [ENGINE] depth: 11, score: 50 cp, nodes: 2397519, nps: 96748
+2025-05-20T20:26:07.972Z stdout: info depth 11 seldepth 30 time 30826 nodes 2855594 score cp 77 nps 95879 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4 e2d1
+info depth 11 seldepth 30 time 30826 nodes 2855594 score cp 52 nps 95879 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5 f3e2
+info depth 11 seldepth 30 time 30826 nodes 2855594 score cp 50 nps 95879 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3 g4e5
+2025-05-20T20:26:07.973Z [ENGINE] depth: 11, score: 77 cp, nodes: 2855594, nps: 95879
+2025-05-20T20:26:07.973Z [ENGINE] depth: 11, score: 52 cp, nodes: 2855594, nps: 95879
+2025-05-20T20:26:07.973Z [ENGINE] depth: 11, score: 50 cp, nodes: 2855594, nps: 95879
+2025-05-20T20:26:08.371Z stdout: info depth 11 seldepth 31 time 31224 nodes 2890508 score cp 76 nps 95769 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4 e2d1
+info depth 11 seldepth 31 time 31224 nodes 2890508 score cp 52 nps 95769 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5 f3e2
+info depth 11 seldepth 31 time 31224 nodes 2890508 score cp 49 nps 95769 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3 g4e5
+2025-05-20T20:26:08.373Z [ENGINE] depth: 11, score: 76 cp, nodes: 2890508, nps: 95769
+2025-05-20T20:26:08.374Z [ENGINE] depth: 11, score: 52 cp, nodes: 2890508, nps: 95769
+2025-05-20T20:26:08.374Z [ENGINE] depth: 11, score: 49 cp, nodes: 2890508, nps: 95769
+2025-05-20T20:26:13.372Z stdout: info depth 11 seldepth 31 time 36226 nodes 3316709 score cp 76 nps 94270 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4 e2d1
+info depth 11 seldepth 31 time 36226 nodes 3316709 score cp 52 nps 94270 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5 f3e2 e5c4
+info depth 11 seldepth 31 time 36226 nodes 3316709 score cp 49 nps 94270 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3 g4e5
+2025-05-20T20:26:13.373Z [ENGINE] depth: 11, score: 76 cp, nodes: 3316709, nps: 94270
+2025-05-20T20:26:13.373Z [ENGINE] depth: 11, score: 52 cp, nodes: 3316709, nps: 94270
+2025-05-20T20:26:13.374Z [ENGINE] depth: 11, score: 49 cp, nodes: 3316709, nps: 94270
+2025-05-20T20:26:18.373Z stdout: info depth 11 seldepth 31 time 41227 nodes 3802105 score cp 76 nps 94617 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4 e2d1 a8b8
+info depth 11 seldepth 31 time 41227 nodes 3802105 score cp 52 nps 94617 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b6 b1c3 g7g6 g1f3 f8g7 c1e3 e8g8 f1e2 b8c6 e1g1 c8g4 d4d5 g4f3 e2f3 c6e5 f3e2 e5c4
+info depth 11 seldepth 31 time 41227 nodes 3802105 score cp 49 nps 94617 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3 g4e5 f3e5
+2025-05-20T20:26:18.374Z [ENGINE] depth: 11, score: 76 cp, nodes: 3802105, nps: 94617
+2025-05-20T20:26:18.374Z [ENGINE] depth: 11, score: 52 cp, nodes: 3802105, nps: 94617
+2025-05-20T20:26:18.374Z [ENGINE] depth: 11, score: 49 cp, nodes: 3802105, nps: 94617
+2025-05-20T20:26:23.374Z stdout: info depth 11 seldepth 31 time 46228 nodes 4214667 score cp 75 nps 93275 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4 e2d1 a8b8
+info depth 11 seldepth 31 time 46228 nodes 4214667 score cp 53 nps 93275 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 b2b4 a5b6 g1f3 g8f6 f1c4 c8f5 e1g1 e7e6 a2a3 f8e7 d2d3 e8g8 c1e3
+2025-05-20T20:26:23.375Z [ENGINE] depth: 11, score: 75 cp, nodes: 4214667, nps: 93275
+2025-05-20T20:26:23.376Z [ENGINE] depth: 11, score: 53 cp, nodes: 4214667, nps: 93275
+2025-05-20T20:26:23.376Z stdout: info depth 11 seldepth 31 time 46228 nodes 4214667 score cp 49 nps 93275 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 b8d7 h1e1 f6g4 h2h3 g4e5 f3e5
+2025-05-20T20:26:23.376Z [ENGINE] depth: 11, score: 49 cp, nodes: 4214667, nps: 93275
+2025-05-20T20:26:28.375Z stdout: info depth 11 seldepth 31 time 51229 nodes 4691838 score cp 75 nps 93488 tbhits 0 multipv 1 pv c2c4 g8f6 b1c3 g7g6 g2g3 f8g7 f1g2 e8g8 e2e4 d7d6 g1e2 c7c5 e1g1 b8c6 d2d3 c8g4 h2h3 g4e2 d1e2 c6d4 e2d1 a8b8 c1e3
+info depth 11 seldepth 31 time 51229 nodes 4691838 score cp 53 nps 93488 tbhits 0 multipv 2 pv e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 b2b4 a5b6 g1f3 g8f6 f1c4 c8f5 e1g1 e7e6 a2a3 f8e7 d2d3 e8g8 c1e3
+info depth 11 seldepth 31 time 51229 nodes 4691838 score cp 50 nps 93488 tbhits 0 multipv 3 pv d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 e2e3 e8g8 b1c3 a7a6 b5a3 b7b5 a3c2 c8b7 e3e4 b5b4 c3a4 f6e4 a4c5 e4c5 c2b4
+2025-05-20T20:26:28.375Z [ENGINE] depth: 11, score: 75 cp, nodes: 4691838, nps: 93488
+2025-05-20T20:26:28.376Z [ENGINE] depth: 11, score: 53 cp, nodes: 4691838, nps: 93488
+2025-05-20T20:26:28.376Z [ENGINE] depth: 11, score: 50 cp, nodes: 4691838, nps: 93488

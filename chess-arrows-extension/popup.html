@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess Arrows</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .settings {
+      margin-bottom: 15px;
+    }
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    input[type="color"] {
+      vertical-align: middle;
+    }
+    label {
+      margin-bottom: 5px;
+      display: block;
+    }
+    .status {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .status.connected {
+      background-color: #dff0d8;
+      color: #3c763d;
+    }
+    .status.disconnected {
+      background-color: #f2dede;
+      color: #a94442;
+    }
+    .status-dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .status-dot.connected {
+      background-color: #3c763d;
+    }
+    .status-dot.disconnected {
+      background-color: #a94442;
+    }
+  </style>
+</head>
+<body>
+  <h2>Chess Arrows Settings</h2>
+  
+  <div id="engineStatus" class="status disconnected">
+    <span class="status-dot disconnected"></span>
+    <span id="statusText">Checking engine status...</span>
+  </div>
+  
+  <div class="settings">
+    <label>
+      <input type="checkbox" id="enableArrows" checked> 
+      Enable Arrows
+    </label>
+  </div>
+  
+  <div class="settings">
+    <label for="bestMoveColor">Best Move Arrow Color:</label>
+    <input type="color" id="bestMoveColor" value="#00ff00">
+  </div>
+  
+  <div class="settings">
+    <label for="alternativeMoveColor">Alternative Move Arrow Color:</label>
+    <input type="color" id="alternativeMoveColor" value="#ff9900">
+  </div>
+  
+  <div class="settings">
+    <label for="arrowWidth">Arrow Width:</label>
+    <input type="range" id="arrowWidth" min="1" max="10" value="5">
+  </div>
+  
+  <div class="settings">
+    <label for="numAlternatives">Number of Alternative Moves to Show:</label>
+    <input type="number" id="numAlternatives" min="0" max="5" value="2">
+  </div>
+  
+  <div class="settings">
+    <label>
+      <input type="checkbox" id="showEvaluation" checked> 
+      Show Evaluation
+    </label>
+  </div>
+  
+  <div class="settings">
+    <label for="enginePath">Path to LC0 Engine:</label>
+    <input type="text" id="enginePath" placeholder="C:/path/to/lc0.exe">
+  </div>
+  
+  <div class="settings">
+    <label for="weightsPath">Path to Maia Weights:</label>
+    <input type="text" id="weightsPath" placeholder="C:/path/to/maia-weights.pb">
+  </div>
+    <div style="margin-top: 15px;">
+    <button id="testEngine" class="button" style="background-color: #2196F3;">Test Engine</button>
+    <button id="testConnection" class="button" style="background-color: #2196F3;">Test Connection</button>
+    <button id="saveSettings" class="button">Save Settings</button>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

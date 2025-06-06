@@ -1,0 +1,17 @@
+{
+  "name": "chess-arrows-host",
+  "version": "1.0.0",
+  "description": "Native messaging host for Chess Arrows extension",
+  "main": "lc0_connector.js",
+  "scripts": {
+    "start": "node lc0_connector.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "cross-spawn": "^7.0.6",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

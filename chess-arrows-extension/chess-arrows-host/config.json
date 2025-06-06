@@ -1,0 +1,7 @@
+{
+  "enginePath": "D:\\games\\lc0-v0.31.2-windows-gpu-nvidia-cuda\\lc0.exe",
+  "weightsPath": "D:\\games\\maia-chess-master\\maia-chess-master\\maia_weights\\maia-1900.pb.gz",
+  "depth": 20,
+  "multipv": 3,
+  "threads": 2
+}

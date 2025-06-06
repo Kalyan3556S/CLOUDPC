@@ -1,0 +1,41 @@
+.chess-arrows-layer {
+  pointer-events: none;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.chess-arrow {
+  opacity: 0.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chess-arrows-eval {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease;
+}
+
+.chess-arrows-eval:hover {
+  opacity: 0.8;
+}
+
+/* Arrow marker definitions */
+.chess-arrows-layer defs marker path {
+  stroke: none;
+  fill: currentColor;
+}

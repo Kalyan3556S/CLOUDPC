@@ -206,7 +206,7 @@ chrome.runtime.onInstalled.addListener(() => {
 // Handle messages from content script
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'getEngineAnalysis') {
-    if (!port || !isEngineReady) {
+    if (!port || !engineStatus.ready) {
       sendResponse({ error: 'Engine not ready' });
       return true;
     }
@@ -242,10 +242,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
   // Return stat information about engine connection
   if (message.action === 'getEngineStatus') {
-    sendResponse({
-      connected: port !== null,
-      ready: isEngineReady
-    });
+      sendResponse({
+        connected: port !== null,
+        ready: engineStatus.ready
+      });
     return true;
   }
 
@@ -294,7 +294,7 @@ class AnalysisQueue {
 
     this.isProcessing = true;
     const request = this.queue.shift();
-    if (!port || !isEngineReady) {
+    if (!port || !engineStatus.ready) {
       request.callback({ error: 'Engine not ready' });
       this.processNext();
       return;
@@ -322,7 +322,7 @@ const queue = new AnalysisQueue();
 
 // Periodically check engine connection and reconnect if needed
 setInterval(() => {
-  if (!port || !isEngineReady) {
+  if (!port || !engineStatus.ready) {
     connectToNativeHost();
   }
 }, 30000);
